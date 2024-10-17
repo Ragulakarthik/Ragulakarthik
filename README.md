@@ -1,7 +1,5 @@
 # 💫 About Me:
 
-👋 I am Karthik Ragula, currently pursuing a B.Tech in Computer Science (Data Science) with a CGPA of 9.45.
-
 **Key Highlights:**
 
 **💼 Internship Experience:**
@@ -14,11 +12,11 @@ As a Software Engineer Intern, I have:
    
 **🚀 Problem-Solving Skills:**
 
-Proficient in problem-solving, having solved over 1,500 challenges across platforms like LeetCode and CodeChef. 💪💻
+Solved **610+ Problems on Leet Code, 520+ Problems on Code Chef, 400+ Problems on Coding Ninjas, 150+ Problems on GFG** 💪💻
 
 **🎓 Leadership and Involvement:**
 
-Successfully conducted 50+ technical and non-technical events, aligning them with the organization’s mission and objectives. My roles encompassed:
+Successfully conducted **50+ technical and non-technical events**, aligning them with the organization’s mission and objectives. My roles encompassed:
 
 📅 Event planning
 📣 Marketing and promotions
