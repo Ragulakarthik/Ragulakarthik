@@ -2,7 +2,7 @@
 
 **Key Highlights:**
 
-**💼 Internship Experience:**
+**💼 CODEHOP INTERFUSION PVT LIMITED - SOFTWARE ENGINEER Internship Experience:**
 
 As a Software Engineer Intern, I have 6 months of experience
 
