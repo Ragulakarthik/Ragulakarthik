@@ -4,11 +4,9 @@
 
 As a Software Engineer Intern, I have 6 months of experience
 
-1. Utilized SOLID principles to design and implement APIs, expanding functionality and optimizing backend processes. 🔧
-2. Identified and fixed over 260 bugs, significantly improving software stability and performance. 🐛✅
-3. Written comprehensive JUnit test cases for over 40 APIs, ensuring robust and error-free functionality across applications. 📝🔍
-   
-Working on 2 major Projects : SMSUITE, InterLink
+1. Achieved significant improvement in backend performance for SMSuite Project by utilizing SOLID principles, API design, and implementation skills.
+2. Led a debugging initiative that resolved over 260 bugs, resulting in a notable increase in software stability and performance.
+3. Developed comprehensive JUnit test cases for over 40 APIs, ensuring robust, error-free functionality across SMSuite Project by leveraging Java, Spring Boot, and JUnit.
 
 
 ## 🌐 Socials:
