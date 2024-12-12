@@ -1,8 +1,15 @@
 # 💫 About Me:
 
-**💼 CODEHOP INTERFUSION PVT LIMITED - SOFTWARE ENGINEER Internship Experience:**
+**INFOSYS SPRINGBOARD - PROJECT DEVELOPER INTERN (Present)**
 
-As a Software Engineer Intern, I have 6 months of experience
+1. I am working on the Quick Park Assist project, focusing on user registration, parking slot management, and
+parking slot booking etc.
+
+2. I facilitate agile practices, manage sprints, and ensure smooth project workflows while contributing to development tasks using Java, Spring MVC, Spring Data JPA, Thymeleaf, and Postman.
+
+**💼 CODEHOP INTERFUSION PVT LIMITED - SOFTWARE ENGINEER Internship (April 2024 - Dec. 2024):**
+
+As a Software Engineer Intern, I have 8 months of experience
 
 1. Achieved significant improvement in backend performance for SMSuite Project by utilizing SOLID principles, API design, and implementation skills.
 2. Led a debugging initiative that resolved over 260 bugs, resulting in a notable increase in software stability and performance.
