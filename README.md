@@ -1,6 +1,6 @@
 # 💫 About Me:
 
-**INFOSYS SPRINGBOARD - PROJECT DEVELOPER INTERN (Present)**
+**💼INFOSYS SPRINGBOARD - PROJECT DEVELOPER INTERN (Present)**
 
 1. I am working on the Quick Park Assist project, focusing on user registration, parking slot management, and
 parking slot booking etc.
