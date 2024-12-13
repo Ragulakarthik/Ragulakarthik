@@ -1,13 +1,13 @@
 # 💫 About Me:
 
-**💼INFOSYS SPRINGBOARD - PROJECT DEVELOPER INTERN (Dec. 2024 - Present)**
+## **💼INFOSYS SPRINGBOARD - PROJECT DEVELOPER INTERN (Dec. 2024 - Present)**
 
 1. I am working on the Quick Park Assist project, focusing on user registration, parking slot management, and
 parking slot booking etc.
 
 2. I facilitate agile practices, manage sprints, and ensure smooth project workflows while contributing to development tasks using Java, Spring MVC, Spring Data JPA, Thymeleaf, and Postman.
 
-**💼 CODEHOP INTERFUSION PVT LIMITED - SOFTWARE ENGINEER Internship (April 2024 - Dec. 2024):**
+## **💼 CODEHOP INTERFUSION PVT LIMITED - SOFTWARE ENGINEER INTERN (April 2024 - Dec. 2024):**
 
 As a Software Engineer Intern, I have 8 months of experience
 
