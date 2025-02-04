@@ -8,7 +8,7 @@
 
 3. Ensuring code quality and maintainability through best practices in version control using Git and participating in code reviews. 
 
-## **💼INFOSYS SPRINGBOARD - PROJECT DEVELOPER INTERN (Dec. 2024 - Present)**
+## **💼INFOSYS SPRINGBOARD - PROJECT DEVELOPER INTERN (Dec. 2024 - Feb. 2025)**
 
 1. Collaborated in the development of the parking spot booking feature, including user registration, slot management, and EV charging integration.
 
