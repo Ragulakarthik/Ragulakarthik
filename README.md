@@ -1,11 +1,21 @@
 # 💫 About Me:
 
+## **💼WaveMaker - INTERN (Jan. 2025 - Present)**
+
+1. Developing and customizing web applications using the WaveMaker low-code platform, integrated with Java, Spring Boot, and SQL for efficient backend solutions.
+
+2. Collaborating with the development team to design scalable APIs, optimize database performance, and implement new features within the Wavemaker platform.
+
+3. Ensuring code quality and maintainability through best practices in version control using Git and participating in code reviews. 
+
 ## **💼INFOSYS SPRINGBOARD - PROJECT DEVELOPER INTERN (Dec. 2024 - Present)**
 
-1. I am working on the Quick Park Assist project, focusing on user registration, parking slot management, and
-parking slot booking etc.
+1. Collaborated in the development of the parking spot booking feature, including user registration, slot management, and EV charging integration.
 
-2. I facilitate agile practices, manage sprints, and ensure smooth project workflows while contributing to development tasks using Java, Spring MVC, Spring Data JPA, Thymeleaf, and Postman.
+2. Contributed to writing JUnit test cases for the booking functionality and ensured code quality through SonarQube analysis and Postman API testing.
+
+3. Assisted in integrating Splunk for log monitoring and Grafana for performance analysis, while supporting agile sprints and team workflows using Java, Spring MVC, Spring Data JPA.
+
 
 ## **💼 CODEHOP INTERFUSION PVT LIMITED - SOFTWARE ENGINEER INTERN (April 2024 - Dec. 2024):**
 
