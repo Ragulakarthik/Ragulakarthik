@@ -25,6 +25,7 @@ As a Software Engineer Intern, I have 8 months of experience
 2. Led a debugging initiative that resolved over 260 bugs, resulting in a notable increase in software stability and performance.
 3. Developed comprehensive JUnit test cases for over 40 APIs, ensuring robust, error-free functionality across SMSuite Project by leveraging Java, Spring Boot, and JUnit.
 
+<div align="center">
 
 ## 🌐 Socials:
 [![LeetCode](https://img.shields.io/badge/LeetCode-%23FFA116.svg?logo=LeetCode&logoColor=white)](https://leetcode.com/u/Karthik_Ragula/) [![CodeChef](https://img.shields.io/badge/CodeChef-%23D17D16.svg?logo=CodeChef&logoColor=white)](https://www.codechef.com/users/rkrk_23) [![GeeksforGeeks](https://img.shields.io/badge/GeeksforGeeks-%230D703D.svg?logo=GeeksforGeeks&logoColor=white)](https://www.geeksforgeeks.org/user/ragulakarthik04/) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/karthik-ragula-5a5b94220) [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/karthikragula04)  [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?logo=YouTube&logoColor=white)](https://youtube.com/@UCsx1SMM76CaKsCGVN6BCQKQ) 
@@ -39,3 +40,4 @@ As a Software Engineer Intern, I have 8 months of experience
 ---
 [![](https://visitcount.itsvg.in/api?id=Ragulakarthik&icon=0&color=0)](https://visitcount.itsvg.in)
 
+</div>
