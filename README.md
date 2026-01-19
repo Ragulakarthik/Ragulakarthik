@@ -1,3 +1,5 @@
+<div align="center">
+
 # 📊 GitHub Stats:
 ![Ragula Karthik's Stats](https://github-readme-stats.vercel.app/api?username=Ragulakarthik&theme=radical&show_icons=true&hide_border=true&count_private=true)
 
