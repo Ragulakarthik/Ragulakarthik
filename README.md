@@ -1,6 +1,6 @@
 # 💫 About Me:
 
-## **💼WaveMaker - INTERN (Jan. 2025 - Present)**
+## **💼WaveMaker - ASE (Jan. 2025 - Present)**
 
 1. Developing and customizing web applications using the WaveMaker low-code platform, integrated with Java, Spring Boot, and SQL for efficient backend solutions.
 
