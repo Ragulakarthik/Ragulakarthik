@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Karthik Ragula — Associate Software Engineer &amp; Agentic AI Developer</title>
+<meta name="description" content="Portfolio of Karthik Ragula — Associate Software Engineer at WaveMaker specializing in Agentic AI, LLM-powered applications, and Java/Spring Boot backend systems." />
+<meta name="keywords" content="Karthik Ragula, Associate Software Engineer, Agentic AI, Java Developer, Spring Boot Developer, Full Stack Developer, Portfolio" />
+<meta name="author" content="Karthik Ragula" />
+<meta name="theme-color" content="#7245ec" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Karthik Ragula — Associate Software Engineer &amp; Agentic AI Developer" />
+<meta property="og:description" content="Associate Software Engineer at WaveMaker specializing in Agentic AI, LLM-powered applications, and Java/Spring Boot backend systems." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="assets/img/profile.png" />
+
+<link rel="icon" type="image/png" href="assets/img/favicon.png" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<!-- Boxicons for iconography (self-hosted) -->
+<link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+
+<!-- Compiled Tailwind -->
+<link rel="stylesheet" href="assets/css/style.css" />
+
+<script>
+  // Apply saved theme before paint to avoid flash-of-wrong-theme
+  if (localStorage.getItem('theme') === 'dark' ||
+      (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark');
+  }
+</script>
+</head>
+
+<body class="overflow-x-hidden">
+
+<!-- ===================== Background canvas (particles) ===================== -->
+<canvas id="particles" class="pointer-events-none fixed inset-0 -z-10 h-full w-full opacity-40 dark:opacity-60"></canvas>
+
+<!-- ===================== Navbar ===================== -->
+<header id="navbar" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
+  <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+    <a href="#home" class="font-display text-xl font-bold text-ink-900 dark:text-white">
+      Karthik<span class="gradient-text">.</span>
+    </a>
+
+    <ul id="nav-links" class="hidden items-center gap-8 md:flex">
+      <li><a href="#home" class="nav-link active" data-nav>Home</a></li>
+      <li><a href="#about" class="nav-link" data-nav>About</a></li>
+      <li><a href="#skills" class="nav-link" data-nav>Skills</a></li>
+      <li><a href="#experience" class="nav-link" data-nav>Experience</a></li>
+      <li><a href="#projects" class="nav-link" data-nav>Projects</a></li>
+      <li><a href="#content" class="nav-link" data-nav>Content</a></li>
+      <li><a href="#contact" class="nav-link" data-nav>Contact</a></li>
+    </ul>
+
+    <div class="flex items-center gap-3">
+      <button id="theme-toggle" aria-label="Toggle dark mode" class="flex h-10 w-10 items-center justify-center rounded-full border border-ink-200 text-ink-600 transition hover:border-brand-400 hover:text-brand-600 dark:border-white/15 dark:text-ink-200">
+        <i class="bx bx-sun text-lg dark:hidden"></i>
+        <i class="bx bx-moon text-lg hidden dark:inline-block"></i>
+      </button>
+      <a href="#contact" class="btn-primary hidden sm:inline-flex">Let's Talk</a>
+      <button id="menu-toggle" aria-label="Toggle menu" class="flex h-10 w-10 items-center justify-center rounded-full border border-ink-200 text-ink-600 dark:border-white/15 dark:text-ink-200 md:hidden">
+        <i class="bx bx-menu text-xl"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="mx-4 hidden flex-col gap-1 rounded-2xl border border-ink-100 bg-white/95 p-4 shadow-xl backdrop-blur dark:border-white/10 dark:bg-ink-900/95 md:hidden">
+    <a href="#home" class="rounded-lg px-4 py-2.5 text-ink-600 hover:bg-brand-500/10 hover:text-brand-600 dark:text-ink-200" data-nav>Home</a>
+    <a href="#about" class="rounded-lg px-4 py-2.5 text-ink-600 hover:bg-brand-500/10 hover:text-brand-600 dark:text-ink-200" data-nav>About</a>
+    <a href="#skills" class="rounded-lg px-4 py-2.5 text-ink-600 hover:bg-brand-500/10 hover:text-brand-600 dark:text-ink-200" data-nav>Skills</a>
+    <a href="#experience" class="rounded-lg px-4 py-2.5 text-ink-600 hover:bg-brand-500/10 hover:text-brand-600 dark:text-ink-200" data-nav>Experience</a>
+    <a href="#projects" class="rounded-lg px-4 py-2.5 text-ink-600 hover:bg-brand-500/10 hover:text-brand-600 dark:text-ink-200" data-nav>Projects</a>
+    <a href="#content" class="rounded-lg px-4 py-2.5 text-ink-600 hover:bg-brand-500/10 hover:text-brand-600 dark:text-ink-200" data-nav>Content</a>
+    <a href="#contact" class="rounded-lg px-4 py-2.5 text-ink-600 hover:bg-brand-500/10 hover:text-brand-600 dark:text-ink-200" data-nav>Contact</a>
+  </div>
+</header>
+
+<main>
+<!-- ===================== Hero ===================== -->
+<section id="home" class="relative flex min-h-screen items-center px-6 pt-28">
+  <div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+    <div class="absolute -top-24 -left-24 h-80 w-80 animate-blob rounded-full bg-brand-400/30 blur-3xl"></div>
+    <div class="absolute top-1/3 right-0 h-96 w-96 animate-blob rounded-full bg-cyan-400/20 blur-3xl [animation-delay:4s]"></div>
+    <div class="absolute bottom-0 left-1/3 h-72 w-72 animate-blob rounded-full bg-fuchsia-400/15 blur-3xl [animation-delay:8s]"></div>
+    <div class="absolute inset-0 bg-grid-pattern [mask-image:radial-gradient(ellipse_at_center,white,transparent_70%)]"></div>
+  </div>
+
+  <div class="mx-auto grid max-w-6xl items-center gap-14 lg:grid-cols-[1.15fr_0.85fr]">
+    <div>
+      <p class="section-label">Open to new opportunities</p>
+
+      <h1 class="mt-6 font-display text-4xl font-extrabold leading-tight text-ink-900 dark:text-white sm:text-5xl lg:text-6xl">
+        Hi, I'm <span class="gradient-text">Karthik Ragula</span>
+      </h1>
+
+      <p class="mt-4 font-display text-xl font-semibold text-ink-600 dark:text-ink-200 sm:text-2xl">
+        I work as an <span id="typed" class="text-brand-600 dark:text-brand-400"></span><span class="typed-cursor text-brand-600 dark:text-brand-400">_</span>
+      </p>
+
+      <p class="section-sub">
+        Associate Software Engineer at <strong class="text-ink-700 dark:text-ink-100">WaveMaker</strong>, building
+        core components of <strong class="text-ink-700 dark:text-ink-100">AIRA</strong> — an enterprise multi-agent
+        AI platform that pairs Python-based agent orchestration with a Java Spring Boot backend to automate
+        full-stack app development. I specialize in Agentic AI, LLM-powered tooling, and scalable backend systems.
+      </p>
+
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a href="#projects" class="btn-primary"><i class="bx bx-grid-alt"></i> View Projects</a>
+        <a href="assets/docs/Karthik_Ragula_Resume.pdf" target="_blank" rel="noopener" download class="btn-ghost"><i class="bx bx-download"></i> Resume</a>
+      </div>
+
+      <div class="mt-10 flex items-center gap-5">
+        <a href="https://github.com/Ragulakarthik" target="_blank" rel="noopener" aria-label="GitHub" class="icon-badge hover:bg-brand-500 hover:text-white"><i class="bx bxl-github text-xl"></i></a>
+        <a href="https://www.linkedin.com/in/karthik-ragula-5a5b94220/" target="_blank" rel="noopener" aria-label="LinkedIn" class="icon-badge hover:bg-brand-500 hover:text-white"><i class="bx bxl-linkedin text-xl"></i></a>
+        <a href="mailto:ragulakarthik04@gmail.com" aria-label="Email" class="icon-badge hover:bg-brand-500 hover:text-white"><i class="bx bx-envelope text-xl"></i></a>
+        <a href="https://leetcode.com/Karthik_Ragula/" target="_blank" rel="noopener" aria-label="LeetCode" class="icon-badge hover:bg-brand-500 hover:text-white"><i class="bx bx-code-alt text-xl"></i></a>
+        <a href="https://www.youtube.com/@karthikragula6666" target="_blank" rel="noopener" aria-label="YouTube" class="icon-badge hover:bg-brand-500 hover:text-white"><i class="bx bxl-youtube text-xl"></i></a>
+      </div>
+    </div>
+
+    <div class="relative mx-auto w-full max-w-sm animate-float">
+      <div class="absolute inset-0 -z-10 rounded-3xl bg-gradient-to-br from-brand-400 via-fuchsia-400 to-cyan-400 opacity-25 blur-2xl"></div>
+
+      <div class="terminal-window tilt-card" data-tilt>
+        <div class="terminal-titlebar">
+          <span class="terminal-dot bg-red-400"></span>
+          <span class="terminal-dot bg-yellow-400"></span>
+          <span class="terminal-dot bg-green-400"></span>
+          <span class="ml-2 font-mono text-xs text-ink-300">karthik.ts</span>
+        </div>
+        <div class="flex items-center gap-4 p-5">
+          <div class="h-20 w-20 shrink-0 overflow-hidden rounded-xl border-2 border-white/10">
+            <img src="assets/img/profile.png" alt="Karthik Ragula" class="h-full w-full object-cover" />
+          </div>
+          <pre class="overflow-x-auto font-mono text-[11px] leading-relaxed text-ink-200 sm:text-xs"><code><span class="text-brand-400">const</span> <span class="text-cyan-300">engineer</span> = {
+  <span class="text-fuchsia-300">name</span>: <span class="text-emerald-300">"Karthik Ragula"</span>,
+  <span class="text-fuchsia-300">role</span>: <span class="text-emerald-300">"Associate SWE"</span>,
+  <span class="text-fuchsia-300">focus</span>: [<span class="text-emerald-300">"Agentic AI"</span>, <span class="text-emerald-300">"LLMs"</span>],
+};</code></pre>
+        </div>
+        <div class="glow-line"></div>
+        <div class="flex items-center justify-between px-5 py-3 font-mono text-[11px] text-ink-400">
+          <span><span class="text-emerald-400">●</span> online</span>
+          <span>WaveMaker · Hyderabad</span>
+        </div>
+      </div>
+
+      <div class="card absolute -bottom-6 -left-8 hidden items-center gap-3 px-4 py-3 shadow-lg sm:flex">
+        <span class="flex h-9 w-9 items-center justify-center rounded-full bg-brand-500/15 text-brand-600 dark:text-brand-300"><i class="bx bxl-youtube"></i></span>
+        <div>
+          <p class="text-sm font-bold text-ink-900 dark:text-white">10K+ Subscribers</p>
+          <p class="text-xs text-ink-500 dark:text-ink-400">YouTube channel</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="#about" class="absolute bottom-8 left-1/2 -translate-x-1/2 text-ink-400 dark:text-ink-500" aria-label="Scroll down">
+    <i class="bx bx-chevron-down animate-bounce text-3xl"></i>
+  </a>
+</section>
+
+<!-- ===================== Stats strip ===================== -->
+<section class="border-y border-ink-100 bg-ink-50/60 py-10 dark:border-white/10 dark:bg-white/[0.03]">
+  <div class="mx-auto grid max-w-6xl grid-cols-2 gap-8 px-6 text-center sm:grid-cols-4">
+    <div class="reveal">
+      <p class="font-display text-3xl font-extrabold text-brand-600 dark:text-brand-400"><span data-counter="1250">0</span>+</p>
+      <p class="mt-1 text-sm text-ink-500 dark:text-ink-400">DSA Problems Solved</p>
+    </div>
+    <div class="reveal">
+      <p class="font-display text-3xl font-extrabold text-brand-600 dark:text-brand-400"><span data-counter="10">0</span>K+</p>
+      <p class="mt-1 text-sm text-ink-500 dark:text-ink-400">YouTube Subscribers</p>
+    </div>
+    <div class="reveal">
+      <p class="font-display text-3xl font-extrabold text-brand-600 dark:text-brand-400"><span data-counter="260">0</span>+</p>
+      <p class="mt-1 text-sm text-ink-500 dark:text-ink-400">Bugs Resolved</p>
+    </div>
+    <div class="reveal">
+      <p class="font-display text-3xl font-extrabold text-brand-600 dark:text-brand-400"><span data-counter="9.4" data-decimals="1">0</span></p>
+      <p class="mt-1 text-sm text-ink-500 dark:text-ink-400">CGPA / 10</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== About ===================== -->
+<section id="about" class="px-6 py-24">
+  <div class="mx-auto max-w-6xl">
+    <div class="text-center">
+      <p class="section-label justify-center">About Me</p>
+      <h2 class="section-title">Turning ideas into reliable software</h2>
+    </div>
+
+    <div class="mt-14 grid gap-12 lg:grid-cols-2">
+      <div class="reveal space-y-5">
+        <p class="text-ink-600 dark:text-ink-300">
+          I'm an <strong class="text-ink-800 dark:text-white">Associate Software Engineer at WaveMaker India
+          Pvt. Ltd.</strong>, where I engineer core components of <strong class="text-ink-800 dark:text-white">AIRA</strong>,
+          our enterprise multi-agent AI platform — integrating Python-based agent orchestration with a Java
+          Spring Boot backend to automate full-stack web and mobile app development. I specialize in
+          <strong class="text-ink-800 dark:text-white">Agentic AI, MCP tooling, and scalable backend systems</strong>.
+        </p>
+        <p class="text-ink-600 dark:text-ink-300">
+          I got here through three internships (WaveMaker, Infosys Springboard, CodeHop Interfusion) where I
+          sharpened my backend fundamentals. Outside of work, I've solved 1,250+ DSA problems across LeetCode,
+          Coding Ninjas &amp; GeeksforGeeks, and run a YouTube channel with 10K+ subscribers and 15M+ views on
+          tech and interview content.
+        </p>
+
+        <div class="grid grid-cols-2 gap-4 pt-2 sm:grid-cols-2">
+          <div class="flex items-center gap-3">
+            <span class="icon-badge"><i class="bx bx-map"></i></span>
+            <div>
+              <p class="text-xs uppercase tracking-wide text-ink-400">Location</p>
+              <p class="text-sm font-semibold text-ink-800 dark:text-ink-100">Hyderabad, Telangana, India</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="icon-badge"><i class="bx bx-envelope"></i></span>
+            <div>
+              <p class="text-xs uppercase tracking-wide text-ink-400">Email</p>
+              <p class="text-sm font-semibold text-ink-800 dark:text-ink-100">ragulakarthik04@gmail.com</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="icon-badge"><i class="bx bx-briefcase"></i></span>
+            <div>
+              <p class="text-xs uppercase tracking-wide text-ink-400">Currently</p>
+              <p class="text-sm font-semibold text-ink-800 dark:text-ink-100">Associate SWE @ WaveMaker</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="icon-badge"><i class="bx bx-book-reader"></i></span>
+            <div>
+              <p class="text-xs uppercase tracking-wide text-ink-400">Education</p>
+              <p class="text-sm font-semibold text-ink-800 dark:text-ink-100">B.Tech CSE (Data Science)</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-3 pt-2">
+          <a href="assets/docs/Karthik_Ragula_Resume.pdf" target="_blank" rel="noopener" download class="btn-primary"><i class="bx bx-download"></i> Download Resume</a>
+          <a href="#contact" class="btn-ghost"><i class="bx bx-message-rounded-dots"></i> Get in Touch</a>
+        </div>
+      </div>
+
+      <div class="reveal grid grid-cols-2 gap-4 sm:grid-cols-4 lg:grid-cols-2">
+        <div class="card card-hover p-5">
+          <i class="bx bx-server text-2xl text-brand-500"></i>
+          <h3 class="mt-3 font-display font-semibold text-ink-900 dark:text-white">Backend Development</h3>
+          <p class="mt-1 text-sm text-ink-500 dark:text-ink-400">Java, Spring Boot, REST APIs</p>
+        </div>
+        <div class="card card-hover p-5">
+          <i class="bx bx-code-curly text-2xl text-brand-500"></i>
+          <h3 class="mt-3 font-display font-semibold text-ink-900 dark:text-white">Frontend Development</h3>
+          <p class="mt-1 text-sm text-ink-500 dark:text-ink-400">HTML, CSS, JavaScript</p>
+        </div>
+        <div class="card card-hover p-5">
+          <i class="bx bx-layer text-2xl text-brand-500"></i>
+          <h3 class="mt-3 font-display font-semibold text-ink-900 dark:text-white">Full Stack Development</h3>
+          <p class="mt-1 text-sm text-ink-500 dark:text-ink-400">End-to-end app delivery</p>
+        </div>
+        <div class="card card-hover p-5">
+          <i class="bx bx-bot text-2xl text-brand-500"></i>
+          <h3 class="mt-3 font-display font-semibold text-ink-900 dark:text-white">Agentic AI</h3>
+          <p class="mt-1 text-sm text-ink-500 dark:text-ink-400">LLM-powered applications</p>
+        </div>
+        <div class="card card-hover p-5">
+          <i class="bx bx-sitemap text-2xl text-brand-500"></i>
+          <h3 class="mt-3 font-display font-semibold text-ink-900 dark:text-white">Multi-Agent Systems</h3>
+          <p class="mt-1 text-sm text-ink-500 dark:text-ink-400">Orchestration frameworks</p>
+        </div>
+        <div class="card card-hover p-5">
+          <i class="bx bx-git-branch text-2xl text-brand-500"></i>
+          <h3 class="mt-3 font-display font-semibold text-ink-900 dark:text-white">DSA</h3>
+          <p class="mt-1 text-sm text-ink-500 dark:text-ink-400">650+ problems solved</p>
+        </div>
+        <div class="card card-hover p-5">
+          <i class="bx bx-cloud text-2xl text-brand-500"></i>
+          <h3 class="mt-3 font-display font-semibold text-ink-900 dark:text-white">Cloud &amp; DevOps</h3>
+          <p class="mt-1 text-sm text-ink-500 dark:text-ink-400">AWS, Docker fundamentals</p>
+        </div>
+        <div class="card card-hover p-5">
+          <i class="bx bxl-youtube text-2xl text-brand-500"></i>
+          <h3 class="mt-3 font-display font-semibold text-ink-900 dark:text-white">Content Creation</h3>
+          <p class="mt-1 text-sm text-ink-500 dark:text-ink-400">10K+ subs · 15M+ views</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== Skills ===================== -->
+<section id="skills" class="bg-ink-50/60 px-6 py-24 dark:bg-white/[0.03]">
+  <div class="mx-auto max-w-6xl">
+    <div class="text-center">
+      <p class="section-label justify-center">Skills</p>
+      <h2 class="section-title">Technologies I work with</h2>
+      <p class="section-sub mx-auto text-center">A practical toolkit built through internships, coursework, and personal projects.</p>
+    </div>
+
+    <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="card card-hover reveal p-6">
+        <span class="icon-badge"><i class="bx bx-code-alt text-xl"></i></span>
+        <h3 class="mt-4 font-display font-semibold text-ink-900 dark:text-white">Languages</h3>
+        <ul class="mt-3 space-y-2 text-sm text-ink-600 dark:text-ink-300">
+          <li>Java</li><li>Python</li><li>JavaScript</li><li>SQL</li><li>HTML5 &amp; CSS3</li>
+        </ul>
+      </div>
+      <div class="card card-hover reveal p-6">
+        <span class="icon-badge"><i class="bx bx-layer text-xl"></i></span>
+        <h3 class="mt-4 font-display font-semibold text-ink-900 dark:text-white">Frameworks</h3>
+        <ul class="mt-3 space-y-2 text-sm text-ink-600 dark:text-ink-300">
+          <li>Spring Boot</li><li>Spring MVC</li><li>Hibernate</li><li>ReactJS</li><li>Microservices</li><li>WaveMaker Low-Code</li>
+        </ul>
+      </div>
+      <div class="card card-hover reveal p-6">
+        <span class="icon-badge"><i class="bx bx-bot text-xl"></i></span>
+        <h3 class="mt-4 font-display font-semibold text-ink-900 dark:text-white">AI &amp; Agents</h3>
+        <ul class="mt-3 space-y-2 text-sm text-ink-600 dark:text-ink-300">
+          <li>Agentic AI</li><li>Multi-Agent Systems</li><li>LLMs</li><li>MCP Tools</li>
+        </ul>
+      </div>
+      <div class="card card-hover reveal p-6">
+        <span class="icon-badge"><i class="bx bx-data text-xl"></i></span>
+        <h3 class="mt-4 font-display font-semibold text-ink-900 dark:text-white">Databases</h3>
+        <ul class="mt-3 space-y-2 text-sm text-ink-600 dark:text-ink-300">
+          <li>MySQL</li><li>PostgreSQL</li>
+        </ul>
+      </div>
+      <div class="card card-hover reveal p-6">
+        <span class="icon-badge"><i class="bx bx-wrench text-xl"></i></span>
+        <h3 class="mt-4 font-display font-semibold text-ink-900 dark:text-white">Tools &amp; Platforms</h3>
+        <ul class="mt-3 space-y-2 text-sm text-ink-600 dark:text-ink-300">
+          <li>Git &amp; GitHub</li><li>Docker</li><li>Maven</li><li>Postman &amp; Swagger</li><li>AWS</li><li>Langfuse</li><li>Splunk &amp; Grafana</li><li>JIRA</li>
+        </ul>
+      </div>
+      <div class="card card-hover reveal p-6">
+        <span class="icon-badge"><i class="bx bx-check-shield text-xl"></i></span>
+        <h3 class="mt-4 font-display font-semibold text-ink-900 dark:text-white">Testing &amp; Practices</h3>
+        <ul class="mt-3 space-y-2 text-sm text-ink-600 dark:text-ink-300">
+          <li>JUnit</li><li>REST APIs</li><li>Agile / Scrum</li><li>Code Reviews</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== Experience ===================== -->
+<section id="experience" class="px-6 py-24">
+  <div class="mx-auto max-w-4xl">
+    <div class="text-center">
+      <p class="section-label justify-center">Experience</p>
+      <h2 class="section-title">Where I've worked</h2>
+    </div>
+
+    <div class="relative mt-16 space-y-12 border-l-2 border-dashed border-ink-200 pl-8 dark:border-white/15">
+
+      <div class="relative reveal">
+        <span class="timeline-dot"></span>
+        <div class="card card-hover p-6">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <h3 class="font-display text-lg font-bold text-ink-900 dark:text-white">WaveMaker Inc.</h3>
+            <span class="chip">Jun 2025 — Present</span>
+          </div>
+          <p class="mt-1 text-sm font-semibold text-brand-600 dark:text-brand-400">Associate Software Engineer · Full-time</p>
+          <ul class="mt-4 list-disc space-y-2 pl-5 text-sm text-ink-600 dark:text-ink-300">
+            <li>Engineer core components of <strong class="text-ink-800 dark:text-ink-100">AIRA</strong>, WaveMaker's enterprise multi-agent AI platform, integrating Python-based agent orchestration with a Java Spring Boot backend to automate full-stack web and mobile app development.</li>
+            <li>Built backend services including database tools, OpenAPI detection, ripgrep-based code search, and targeted file editing, plus MCP tools enabling intelligent developer workflows.</li>
+            <li>Designed the Skills &amp; Actions framework for dynamic agent orchestration, enabling intent-specific capability loading and reducing response latency.</li>
+            <li>Implemented a checkpoint branching mechanism with hash-based optimistic concurrency control to improve scalability and prevent overwrite conflicts during parallel execution.</li>
+            <li>Built a bidirectional secret-redaction pipeline that masks credentials before LLM processing and restores them before tool execution, and integrated Langfuse for distributed tracing and prompt observability.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="relative reveal">
+        <span class="timeline-dot"></span>
+        <div class="card card-hover p-6">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <h3 class="font-display text-lg font-bold text-ink-900 dark:text-white">WaveMaker Inc.</h3>
+            <span class="chip">Jan 2025 — Jun 2025</span>
+          </div>
+          <p class="mt-1 text-sm font-semibold text-brand-600 dark:text-brand-400">Software Engineer Intern</p>
+          <ul class="mt-4 list-disc space-y-2 pl-5 text-sm text-ink-600 dark:text-ink-300">
+            <li>Developed and customized web applications on the WaveMaker low-code platform, integrated with Java, Spring Boot, and SQL for efficient backend solutions.</li>
+            <li>Built a Python script to validate MySQL and PostgreSQL databases after a MySQL → PostgreSQL migration, comparing table structures, indexes, columns, and data integrity using optimized text compression.</li>
+            <li>Maintained code quality through Git version control best practices and active participation in code reviews.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="relative reveal">
+        <span class="timeline-dot"></span>
+        <div class="card card-hover p-6">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <h3 class="font-display text-lg font-bold text-ink-900 dark:text-white">Infosys Springboard</h3>
+            <span class="chip">Dec 2024 — Feb 2025</span>
+          </div>
+          <p class="mt-1 text-sm font-semibold text-brand-600 dark:text-brand-400">Project Developer Intern · Remote</p>
+          <ul class="mt-4 list-disc space-y-2 pl-5 text-sm text-ink-600 dark:text-ink-300">
+            <li>Collaborated on a parking-spot booking feature, including user registration, slot management, and EV charging integration.</li>
+            <li>Validated the booking feature with 150+ JUnit test cases achieving 99.9% code coverage, surfacing fixes for the three biggest causes of booking failures during peak hours.</li>
+            <li>Helped integrate Splunk for log monitoring and Grafana for performance analysis while supporting agile sprints using Java, Spring MVC, and Spring Data JPA.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="relative reveal">
+        <span class="timeline-dot"></span>
+        <div class="card card-hover p-6">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <h3 class="font-display text-lg font-bold text-ink-900 dark:text-white">CodeHop Interfusion</h3>
+            <span class="chip">Apr 2024 — Dec 2024</span>
+          </div>
+          <p class="mt-1 text-sm font-semibold text-brand-600 dark:text-brand-400">Intern Software Engineer · Remote</p>
+          <ul class="mt-4 list-disc space-y-2 pl-5 text-sm text-ink-600 dark:text-ink-300">
+            <li>Led backend development for SMSuite, a business inventory management platform enabling product registration, quantity tracking, and sales monitoring with a revenue &amp; quantity dashboard.</li>
+            <li>Identified and resolved 260+ bugs, improving system stability, as part of an 11-member backend team following Agile practices.</li>
+            <li>Authored JUnit test cases for 40+ REST APIs, achieving 85%+ code coverage using Java and Spring Boot.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Leadership & Achievements -->
+    <div class="mt-16 grid gap-4 sm:grid-cols-2">
+      <div class="card card-hover reveal flex items-center gap-4 p-5">
+        <span class="icon-badge"><i class="bx bx-crown"></i></span>
+        <div>
+          <p class="font-semibold text-ink-900 dark:text-white">Secretary, DATA Association</p>
+          <p class="text-xs text-ink-500 dark:text-ink-400">Led a 600+ member community · Jan 2024 — Dec 2024</p>
+        </div>
+      </div>
+      <div class="card card-hover reveal flex items-center gap-4 p-5">
+        <span class="icon-badge"><i class="bx bx-flag"></i></span>
+        <div>
+          <p class="font-semibold text-ink-900 dark:text-white">Technical Coordinator</p>
+          <p class="text-xs text-ink-500 dark:text-ink-400">Sree Vidyanikethan · Mar 2023 — Jan 2024</p>
+        </div>
+      </div>
+      <div class="card card-hover reveal flex items-center gap-4 p-5">
+        <span class="icon-badge"><i class="bx bx-medal"></i></span>
+        <div>
+          <p class="font-semibold text-ink-900 dark:text-white">2nd Place, MOOCGATE</p>
+          <p class="text-xs text-ink-500 dark:text-ink-400">ISTE competition · 1,200+ participants</p>
+        </div>
+      </div>
+      <div class="card card-hover reveal flex items-center gap-4 p-5">
+        <span class="icon-badge"><i class="bx bx-medal"></i></span>
+        <div>
+          <p class="font-semibold text-ink-900 dark:text-white">3rd Place, Career Quest</p>
+          <p class="text-xs text-ink-500 dark:text-ink-400">ISTE competition · 1,200+ participants</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div class="mt-20 text-center">
+      <p class="section-label justify-center">Education</p>
+      <h2 class="section-title">Academic background</h2>
+    </div>
+    <div class="mt-10 space-y-4">
+      <div class="card card-hover reveal p-6">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <h3 class="font-display text-lg font-bold text-ink-900 dark:text-white">Sree Vidyanikethan Engineering College</h3>
+          <span class="chip">2021 — 2025</span>
+        </div>
+        <p class="mt-1 text-sm font-semibold text-brand-600 dark:text-brand-400">B.Tech, Computer Science &amp; Engineering (Data Science)</p>
+        <ul class="mt-4 list-disc space-y-1 pl-5 text-sm text-ink-600 dark:text-ink-300">
+          <li>CGPA: 9.4 / 10</li>
+          <li>Secretary of the DATA Association &amp; former Technical Coordinator</li>
+        </ul>
+      </div>
+      <div class="card card-hover reveal p-6">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <h3 class="font-display text-lg font-bold text-ink-900 dark:text-white">Narayana Junior College</h3>
+          <span class="chip">Jun 2019 — Jul 2021</span>
+        </div>
+        <p class="mt-1 text-sm font-semibold text-brand-600 dark:text-brand-400">Intermediate, MPC (Maths, Physics, Chemistry)</p>
+        <ul class="mt-4 list-disc space-y-1 pl-5 text-sm text-ink-600 dark:text-ink-300">
+          <li>Grade: 973 / 1000</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Certifications -->
+    <div class="mt-12">
+      <h3 class="text-center font-display text-xl font-bold text-ink-900 dark:text-white">Certifications</h3>
+      <p class="mt-2 text-center text-sm text-ink-500 dark:text-ink-400">
+        Wondering if NPTEL certs are actually worth it?
+        <a href="https://www.youtube.com/watch?v=1wv-TN3oYHc" target="_blank" rel="noopener" class="font-semibold text-brand-600 hover:underline dark:text-brand-400">Watch my honest take &rarr;</a>
+      </p>
+      <div class="mt-8 grid gap-4 sm:grid-cols-2">
+        <a href="https://drive.google.com/file/d/134lbNlDa244_IWWiYMWASjaJ4DF370tk/view?usp=drive_link" target="_blank" rel="noopener" class="card card-hover reveal flex items-center gap-3 p-4">
+          <span class="icon-badge"><i class="bx bx-certification"></i></span>
+          <div>
+            <p class="font-semibold text-ink-900 dark:text-white">Programming in Java</p>
+            <p class="text-xs text-ink-500 dark:text-ink-400">NPTEL</p>
+          </div>
+        </a>
+        <a href="https://drive.google.com/file/d/1CpVwdPsp-McRYTyVDAryhvA2fgLoCkRu/view?usp=drive_link" target="_blank" rel="noopener" class="card card-hover reveal flex items-center gap-3 p-4">
+          <span class="icon-badge"><i class="bx bx-certification"></i></span>
+          <div>
+            <p class="font-semibold text-ink-900 dark:text-white">The Joy of Computing using Python</p>
+            <p class="text-xs text-ink-500 dark:text-ink-400">NPTEL · May 2023</p>
+          </div>
+        </a>
+        <a href="https://drive.google.com/file/d/1H2k6al9y_q5-KEXYSJJ2WGz6SIBVMZXN/view?usp=drive_link" target="_blank" rel="noopener" class="card card-hover reveal flex items-center gap-3 p-4">
+          <span class="icon-badge"><i class="bx bx-certification"></i></span>
+          <div>
+            <p class="font-semibold text-ink-900 dark:text-white">Database Management System</p>
+            <p class="text-xs text-ink-500 dark:text-ink-400">NPTEL · Sep 2023</p>
+          </div>
+        </a>
+        <a href="https://drive.google.com/file/d/1gaxl9-CyD2B0qB-pGX2330CXJzB25DpH/view?usp=drive_link" target="_blank" rel="noopener" class="card card-hover reveal flex items-center gap-3 p-4">
+          <span class="icon-badge"><i class="bx bx-certification"></i></span>
+          <div>
+            <p class="font-semibold text-ink-900 dark:text-white">Python for Data Science</p>
+            <p class="text-xs text-ink-500 dark:text-ink-400">NPTEL</p>
+          </div>
+        </a>
+        <a href="https://www.coursera.org/account/accomplishments/professional-cert/6GDVK29VHW2A" target="_blank" rel="noopener" class="card card-hover reveal flex items-center gap-3 p-4">
+          <span class="icon-badge"><i class="bx bx-certification"></i></span>
+          <div>
+            <p class="font-semibold text-ink-900 dark:text-white">Google Data Analytics</p>
+            <p class="text-xs text-ink-500 dark:text-ink-400">Coursera</p>
+          </div>
+        </a>
+        <a href="https://www.coursera.org/account/accomplishments/professional-cert/F6ETP3WZLFDM" target="_blank" rel="noopener" class="card card-hover reveal flex items-center gap-3 p-4">
+          <span class="icon-badge"><i class="bx bx-certification"></i></span>
+          <div>
+            <p class="font-semibold text-ink-900 dark:text-white">Google Project Management</p>
+            <p class="text-xs text-ink-500 dark:text-ink-400">Coursera</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== Projects ===================== -->
+<section id="projects" class="bg-ink-50/60 px-6 py-24 dark:bg-white/[0.03]">
+  <div class="mx-auto max-w-6xl">
+    <div class="text-center">
+      <p class="section-label justify-center">Projects</p>
+      <h2 class="section-title">Things I've built</h2>
+      <p class="section-sub mx-auto text-center">A mix of Java/Spring Boot applications, web projects, and Python programs.</p>
+    </div>
+
+    <div class="mt-10 flex flex-wrap justify-center gap-3">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="java">Java &amp; Spring Boot</button>
+      <button class="filter-btn" data-filter="web">Web</button>
+      <button class="filter-btn" data-filter="python">Python</button>
+    </div>
+
+    <div id="project-grid" class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+      <article class="project-card card card-hover reveal flex flex-col overflow-hidden" data-category="java">
+        <div class="flex items-center justify-between bg-gradient-to-br from-brand-500 to-teal-500 p-6 text-white">
+          <i class="bx bx-book-bookmark text-3xl"></i>
+          <span class="chip !border-white/40 !bg-white/15 !text-white">Java · Spring Boot</span>
+        </div>
+        <div class="flex flex-1 flex-col p-6">
+          <h3 class="font-display text-lg font-bold text-ink-900 dark:text-white">Library Management System</h3>
+          <p class="mt-2 flex-1 text-sm text-ink-600 dark:text-ink-300">A backend system for managing books, members, and borrow/return records, with a companion frontend for day-to-day library operations.</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="chip">Java</span><span class="chip">Spring Boot</span><span class="chip">MySQL</span>
+          </div>
+          <div class="mt-5 flex gap-4 text-sm font-semibold">
+            <a href="https://github.com/Ragulakarthik/LMS" target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-ink-700 hover:text-brand-600 dark:text-ink-200"><i class="bx bxl-github"></i> Code</a>
+            <a href="https://ragulakarthik.github.io/LMS/LMS-FRONEND/index.html" target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-brand-600 hover:text-brand-700 dark:text-brand-400"><i class="bx bx-link-external"></i> Live Demo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card card card-hover reveal flex flex-col overflow-hidden" data-category="web">
+        <div class="flex items-center justify-between bg-gradient-to-br from-rose-500 to-orange-400 p-6 text-white">
+          <i class="bx bx-plus-medical text-3xl"></i>
+          <span class="chip !border-white/40 !bg-white/15 !text-white">Web</span>
+        </div>
+        <div class="flex flex-1 flex-col p-6">
+          <h3 class="font-display text-lg font-bold text-ink-900 dark:text-white">Cardio Thoracic Surgery</h3>
+          <p class="mt-2 flex-1 text-sm text-ink-600 dark:text-ink-300">An informational healthcare website presenting cardio-thoracic surgery services, procedures, and patient information.</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span>
+          </div>
+          <div class="mt-5 flex gap-4 text-sm font-semibold">
+            <a href="https://github.com/Ragulakarthik/CT_Surgery" target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-ink-700 hover:text-brand-600 dark:text-ink-200"><i class="bx bxl-github"></i> Code</a>
+            <a href="http://cardio-thoracic.42web.io/" target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-brand-600 hover:text-brand-700 dark:text-brand-400"><i class="bx bx-link-external"></i> Live Demo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card card card-hover reveal flex flex-col overflow-hidden" data-category="web">
+        <div class="flex items-center justify-between bg-gradient-to-br from-indigo-500 to-blue-400 p-6 text-white">
+          <i class="bx bx-link-alt text-3xl"></i>
+          <span class="chip !border-white/40 !bg-white/15 !text-white">Web</span>
+        </div>
+        <div class="flex flex-1 flex-col p-6">
+          <h3 class="font-display text-lg font-bold text-ink-900 dark:text-white">URL Shortener</h3>
+          <p class="mt-2 flex-1 text-sm text-ink-600 dark:text-ink-300">A web application that converts long URLs into short, shareable links.</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="chip">Web App</span>
+          </div>
+          <div class="mt-5 flex gap-4 text-sm font-semibold">
+            <a href="https://github.com/Ragulakarthik/karthik_vt_03-08-2024" target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-ink-700 hover:text-brand-600 dark:text-ink-200"><i class="bx bxl-github"></i> Code</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card card card-hover reveal flex flex-col overflow-hidden" data-category="web">
+        <div class="flex items-center justify-between bg-gradient-to-br from-amber-500 to-yellow-400 p-6 text-white">
+          <i class="bx bx-book-content text-3xl"></i>
+          <span class="chip !border-white/40 !bg-white/15 !text-white">Web</span>
+        </div>
+        <div class="flex flex-1 flex-col p-6">
+          <h3 class="font-display text-lg font-bold text-ink-900 dark:text-white">My Diary Web App</h3>
+          <p class="mt-2 flex-1 text-sm text-ink-600 dark:text-ink-300">A personal journaling web app to create, store, and revisit daily diary entries.</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="chip">Web App</span>
+          </div>
+          <div class="mt-5 flex gap-4 text-sm font-semibold">
+            <a href="https://github.com/Ragulakarthik/MyDiaryApp" target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-ink-700 hover:text-brand-600 dark:text-ink-200"><i class="bx bxl-github"></i> Code</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card card card-hover reveal flex flex-col overflow-hidden" data-category="web">
+        <div class="flex items-center justify-between bg-gradient-to-br from-emerald-500 to-lime-400 p-6 text-white">
+          <i class="bx bx-building-house text-3xl"></i>
+          <span class="chip !border-white/40 !bg-white/15 !text-white">Web</span>
+        </div>
+        <div class="flex flex-1 flex-col p-6">
+          <h3 class="font-display text-lg font-bold text-ink-900 dark:text-white">6K Homes</h3>
+          <p class="mt-2 flex-1 text-sm text-ink-600 dark:text-ink-300">A real-estate listing website showcasing property listings with a clean, browsable layout.</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span>
+          </div>
+          <div class="mt-5 flex gap-4 text-sm font-semibold">
+            <a href="https://github.com/Ragulakarthik/6K_Homes" target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-ink-700 hover:text-brand-600 dark:text-ink-200"><i class="bx bxl-github"></i> Code</a>
+            <a href="https://ragulakarthik.github.io/6K_Homes/6KHomes.html" target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-brand-600 hover:text-brand-700 dark:text-brand-400"><i class="bx bx-link-external"></i> Live Demo</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card card card-hover reveal flex flex-col overflow-hidden" data-category="python">
+        <div class="flex items-center justify-between bg-gradient-to-br from-cyan-500 to-sky-400 p-6 text-white">
+          <i class="bx bx-dice-5 text-3xl"></i>
+          <span class="chip !border-white/40 !bg-white/15 !text-white">Python</span>
+        </div>
+        <div class="flex flex-1 flex-col p-6">
+          <h3 class="font-display text-lg font-bold text-ink-900 dark:text-white">Number Guessing Game</h3>
+          <p class="mt-2 flex-1 text-sm text-ink-600 dark:text-ink-300">A console-based game where the player guesses a randomly generated number with score tracking.</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="chip">Python</span>
+          </div>
+          <div class="mt-5 flex gap-4 text-sm font-semibold">
+            <a href="https://github.com/Ragulakarthik/OIBSIP_task_2" target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-ink-700 hover:text-brand-600 dark:text-ink-200"><i class="bx bxl-github"></i> Code</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card card card-hover reveal flex flex-col overflow-hidden" data-category="python">
+        <div class="flex items-center justify-between bg-gradient-to-br from-violet-500 to-purple-400 p-6 text-white">
+          <i class="bx bx-credit-card text-3xl"></i>
+          <span class="chip !border-white/40 !bg-white/15 !text-white">Python</span>
+        </div>
+        <div class="flex flex-1 flex-col p-6">
+          <h3 class="font-display text-lg font-bold text-ink-900 dark:text-white">ATM Interface</h3>
+          <p class="mt-2 flex-1 text-sm text-ink-600 dark:text-ink-300">A simulated ATM console application supporting balance checks, deposits, withdrawals, and transaction history.</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="chip">Python</span>
+          </div>
+          <div class="mt-5 flex gap-4 text-sm font-semibold">
+            <a href="https://github.com/Ragulakarthik/OIBSIP_task_3" target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-ink-700 hover:text-brand-600 dark:text-ink-200"><i class="bx bxl-github"></i> Code</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card card card-hover reveal flex flex-col overflow-hidden" data-category="python">
+        <div class="flex items-center justify-between bg-gradient-to-br from-fuchsia-500 to-pink-400 p-6 text-white">
+          <i class="bx bx-task text-3xl"></i>
+          <span class="chip !border-white/40 !bg-white/15 !text-white">Python</span>
+        </div>
+        <div class="flex flex-1 flex-col p-6">
+          <h3 class="font-display text-lg font-bold text-ink-900 dark:text-white">Online Examination System</h3>
+          <p class="mt-2 flex-1 text-sm text-ink-600 dark:text-ink-300">An application for creating, taking, and evaluating exams online, with automatic scoring.</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="chip">Python</span>
+          </div>
+          <div class="mt-5 flex gap-4 text-sm font-semibold">
+            <a href="https://github.com/Ragulakarthik/OIBSIP_task_4" target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-ink-700 hover:text-brand-600 dark:text-ink-200"><i class="bx bxl-github"></i> Code</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== Coding Profiles ===================== -->
+<section class="px-6 py-24">
+  <div class="mx-auto max-w-6xl">
+    <div class="text-center">
+      <p class="section-label justify-center">Coding Profiles</p>
+      <h2 class="section-title">Where I practice &amp; compete</h2>
+    </div>
+
+    <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <a href="https://leetcode.com/Karthik_Ragula/" target="_blank" rel="noopener" class="card card-hover reveal p-6 text-center">
+        <i class="bx bx-code-alt text-3xl text-brand-500"></i>
+        <h3 class="mt-3 font-display font-semibold text-ink-900 dark:text-white">LeetCode</h3>
+        <p class="mt-1 text-sm text-ink-500 dark:text-ink-400">650+ problems solved</p>
+      </a>
+      <a href="https://www.naukri.com/code360/profile/Karthik_Ragula" target="_blank" rel="noopener" class="card card-hover reveal p-6 text-center">
+        <i class="bx bx-medal text-3xl text-brand-500"></i>
+        <h3 class="mt-3 font-display font-semibold text-ink-900 dark:text-white">Coding Ninjas</h3>
+        <p class="mt-1 text-sm text-ink-500 dark:text-ink-400">450+ solved · Master Badge</p>
+      </a>
+      <a href="https://www.geeksforgeeks.org/user/ragulakarthik04/" target="_blank" rel="noopener" class="card card-hover reveal p-6 text-center">
+        <i class="bx bx-code-block text-3xl text-brand-500"></i>
+        <h3 class="mt-3 font-display font-semibold text-ink-900 dark:text-white">GeeksforGeeks</h3>
+        <p class="mt-1 text-sm text-ink-500 dark:text-ink-400">150+ problems solved</p>
+      </a>
+      <a href="https://www.codechef.com/users/rkrk_23" target="_blank" rel="noopener" class="card card-hover reveal p-6 text-center">
+        <i class="bx bx-food-menu text-3xl text-brand-500"></i>
+        <h3 class="mt-3 font-display font-semibold text-ink-900 dark:text-white">CodeChef</h3>
+        <p class="mt-1 text-sm text-ink-500 dark:text-ink-400">rkrk_23</p>
+      </a>
+      <a href="https://www.youtube.com/@karthikragula6666" target="_blank" rel="noopener" class="card card-hover reveal p-6 text-center">
+        <i class="bx bxl-youtube text-3xl text-brand-500"></i>
+        <h3 class="mt-3 font-display font-semibold text-ink-900 dark:text-white">YouTube</h3>
+        <p class="mt-1 text-sm text-ink-500 dark:text-ink-400">10K+ subscribers</p>
+      </a>
+      <a href="https://www.linkedin.com/in/karthik-ragula-5a5b94220/" target="_blank" rel="noopener" class="card card-hover reveal p-6 text-center">
+        <i class="bx bxl-linkedin text-3xl text-brand-500"></i>
+        <h3 class="mt-3 font-display font-semibold text-ink-900 dark:text-white">LinkedIn</h3>
+        <p class="mt-1 text-sm text-ink-500 dark:text-ink-400">2,500+ followers</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== Beyond Code (YouTube) ===================== -->
+<section id="content" class="bg-ink-50/60 px-6 py-24 dark:bg-white/[0.03]">
+  <div class="mx-auto max-w-6xl">
+    <div class="text-center">
+      <p class="section-label justify-center">Beyond Code</p>
+      <h2 class="section-title">Helping freshers crack interviews</h2>
+      <p class="section-sub mx-auto text-center">
+        I run a Telugu-language YouTube channel breaking down real interview experiences and career
+        guidance for CS students — 10K+ subscribers and 15M+ views.
+      </p>
+    </div>
+
+    <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+      <a href="https://www.youtube.com/watch?v=ybhXKCeVWlU" target="_blank" rel="noopener" class="card card-hover reveal group overflow-hidden">
+        <div class="relative aspect-video w-full overflow-hidden bg-ink-800">
+          <img src="https://i.ytimg.com/vi/ybhXKCeVWlU/hqdefault.jpg" alt="Infosys Interview Experience thumbnail" loading="lazy" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+          <div class="absolute inset-0 flex items-center justify-center">
+            <span class="flex h-14 w-14 items-center justify-center rounded-full bg-white/90 text-brand-600 shadow-lg transition-transform group-hover:scale-110"><i class="bx bx-play text-2xl"></i></span>
+          </div>
+          <span class="chip absolute bottom-3 left-3 !border-white/30 !bg-black/50 !text-white">68K+ views</span>
+        </div>
+        <div class="p-5">
+          <h3 class="line-clamp-2 font-display font-semibold text-ink-900 dark:text-white">Infosys Interview Experience — From Application to Job Offer</h3>
+          <p class="mt-1 text-sm text-ink-500 dark:text-ink-400">Telugu · Interview Experience</p>
+        </div>
+      </a>
+
+      <a href="https://www.youtube.com/watch?v=cDj0lgFLnJk" target="_blank" rel="noopener" class="card card-hover reveal group overflow-hidden">
+        <div class="relative aspect-video w-full overflow-hidden bg-ink-800">
+          <img src="https://i.ytimg.com/vi/cDj0lgFLnJk/hqdefault.jpg" alt="Cognizant GenC Interview Experience thumbnail" loading="lazy" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+          <div class="absolute inset-0 flex items-center justify-center">
+            <span class="flex h-14 w-14 items-center justify-center rounded-full bg-white/90 text-brand-600 shadow-lg transition-transform group-hover:scale-110"><i class="bx bx-play text-2xl"></i></span>
+          </div>
+          <span class="chip absolute bottom-3 left-3 !border-white/30 !bg-black/50 !text-white">59K+ views</span>
+        </div>
+        <div class="p-5">
+          <h3 class="line-clamp-2 font-display font-semibold text-ink-900 dark:text-white">Cognizant GenC Interview Experience — All Rounds Explained</h3>
+          <p class="mt-1 text-sm text-ink-500 dark:text-ink-400">Telugu · Interview Experience</p>
+        </div>
+      </a>
+
+      <a href="https://www.youtube.com/watch?v=x610CbEozrY" target="_blank" rel="noopener" class="card card-hover reveal group overflow-hidden">
+        <div class="relative aspect-video w-full overflow-hidden bg-ink-800">
+          <img src="https://i.ytimg.com/vi/x610CbEozrY/hqdefault.jpg" alt="Accenture Interview Experience thumbnail" loading="lazy" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+          <div class="absolute inset-0 flex items-center justify-center">
+            <span class="flex h-14 w-14 items-center justify-center rounded-full bg-white/90 text-brand-600 shadow-lg transition-transform group-hover:scale-110"><i class="bx bx-play text-2xl"></i></span>
+          </div>
+          <span class="chip absolute bottom-3 left-3 !border-white/30 !bg-black/50 !text-white">23K+ views</span>
+        </div>
+        <div class="p-5">
+          <h3 class="line-clamp-2 font-display font-semibold text-ink-900 dark:text-white">Accenture Interview Experience — Full Process Explained</h3>
+          <p class="mt-1 text-sm text-ink-500 dark:text-ink-400">Telugu · Interview Experience</p>
+        </div>
+      </a>
+
+      <a href="https://www.youtube.com/watch?v=Udg2CM5lAoE" target="_blank" rel="noopener" class="card card-hover reveal group overflow-hidden">
+        <div class="relative aspect-video w-full overflow-hidden bg-ink-800">
+          <img src="https://i.ytimg.com/vi/Udg2CM5lAoE/hqdefault.jpg" alt="LTI Mindtree Interview Experience thumbnail" loading="lazy" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+          <div class="absolute inset-0 flex items-center justify-center">
+            <span class="flex h-14 w-14 items-center justify-center rounded-full bg-white/90 text-brand-600 shadow-lg transition-transform group-hover:scale-110"><i class="bx bx-play text-2xl"></i></span>
+          </div>
+          <span class="chip absolute bottom-3 left-3 !border-white/30 !bg-black/50 !text-white">15K+ views</span>
+        </div>
+        <div class="p-5">
+          <h3 class="line-clamp-2 font-display font-semibold text-ink-900 dark:text-white">LTI Mindtree Interview Experience — Online Test + Technical Round</h3>
+          <p class="mt-1 text-sm text-ink-500 dark:text-ink-400">Telugu · Interview Experience</p>
+        </div>
+      </a>
+
+      <a href="https://www.youtube.com/watch?v=1wv-TN3oYHc" target="_blank" rel="noopener" class="card card-hover reveal group overflow-hidden">
+        <div class="relative aspect-video w-full overflow-hidden bg-ink-800">
+          <img src="https://i.ytimg.com/vi/1wv-TN3oYHc/hqdefault.jpg" alt="Are NPTEL Certificates Worth It thumbnail" loading="lazy" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+          <div class="absolute inset-0 flex items-center justify-center">
+            <span class="flex h-14 w-14 items-center justify-center rounded-full bg-white/90 text-brand-600 shadow-lg transition-transform group-hover:scale-110"><i class="bx bx-play text-2xl"></i></span>
+          </div>
+          <span class="chip absolute bottom-3 left-3 !border-white/30 !bg-black/50 !text-white">7K+ views</span>
+        </div>
+        <div class="p-5">
+          <h3 class="line-clamp-2 font-display font-semibold text-ink-900 dark:text-white">Are NPTEL Certificates Really Worth It? My Honest Experience</h3>
+          <p class="mt-1 text-sm text-ink-500 dark:text-ink-400">Telugu · Career Guidance</p>
+        </div>
+      </a>
+
+    </div>
+
+    <div class="mt-10 text-center">
+      <a href="https://www.youtube.com/@karthikragula6666" target="_blank" rel="noopener" class="btn-primary"><i class="bx bxl-youtube"></i> Watch More on YouTube</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== Contact ===================== -->
+<section id="contact" class="bg-ink-50/60 px-6 py-24 dark:bg-white/[0.03]">
+  <div class="mx-auto max-w-6xl">
+    <div class="text-center">
+      <p class="section-label justify-center">Contact</p>
+      <h2 class="section-title">Let's build something together</h2>
+      <p class="section-sub mx-auto text-center">Have a role, project, or idea in mind? My inbox is open.</p>
+    </div>
+
+    <div class="mt-14 grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+      <div class="reveal space-y-6">
+        <div class="card flex items-center gap-4 p-5">
+          <span class="icon-badge"><i class="bx bx-envelope text-xl"></i></span>
+          <div>
+            <p class="text-xs uppercase tracking-wide text-ink-400">Email</p>
+            <a href="mailto:ragulakarthik04@gmail.com" class="font-semibold text-ink-800 hover:text-brand-600 dark:text-ink-100">ragulakarthik04@gmail.com</a>
+          </div>
+        </div>
+        <div class="card flex items-center gap-4 p-5">
+          <span class="icon-badge"><i class="bx bx-phone text-xl"></i></span>
+          <div>
+            <p class="text-xs uppercase tracking-wide text-ink-400">Phone</p>
+            <a href="tel:+918008041620" class="font-semibold text-ink-800 hover:text-brand-600 dark:text-ink-100">+91 80080 41620</a>
+          </div>
+        </div>
+        <div class="card flex items-center gap-4 p-5">
+          <span class="icon-badge"><i class="bx bx-map text-xl"></i></span>
+          <div>
+            <p class="text-xs uppercase tracking-wide text-ink-400">Location</p>
+            <p class="font-semibold text-ink-800 dark:text-ink-100">Hyderabad, Telangana, India</p>
+          </div>
+        </div>
+        <div class="card flex items-center gap-4 p-5">
+          <span class="icon-badge"><i class="bx bx-share-alt text-xl"></i></span>
+          <div class="flex-1">
+            <p class="text-xs uppercase tracking-wide text-ink-400">Social</p>
+            <div class="mt-2 flex gap-3">
+              <a href="https://github.com/Ragulakarthik" target="_blank" rel="noopener" class="icon-badge h-10 w-10 hover:bg-brand-500 hover:text-white"><i class="bx bxl-github"></i></a>
+              <a href="https://www.linkedin.com/in/karthik-ragula-5a5b94220/" target="_blank" rel="noopener" class="icon-badge h-10 w-10 hover:bg-brand-500 hover:text-white"><i class="bx bxl-linkedin"></i></a>
+              <a href="https://www.youtube.com/@karthikragula6666" target="_blank" rel="noopener" class="icon-badge h-10 w-10 hover:bg-brand-500 hover:text-white"><i class="bx bxl-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form id="contact-form" class="card reveal space-y-5 p-8">
+        <div class="grid gap-5 sm:grid-cols-2">
+          <div>
+            <label for="name" class="mb-1.5 block text-sm font-medium text-ink-600 dark:text-ink-300">Name</label>
+            <input id="name" name="name" type="text" required placeholder="Your name" class="w-full rounded-xl border border-ink-200 bg-white px-4 py-2.5 text-sm text-ink-800 outline-none transition focus:border-brand-400 dark:border-white/10 dark:bg-ink-900 dark:text-white" />
+          </div>
+          <div>
+            <label for="email" class="mb-1.5 block text-sm font-medium text-ink-600 dark:text-ink-300">Email</label>
+            <input id="email" name="email" type="email" required placeholder="you@example.com" class="w-full rounded-xl border border-ink-200 bg-white px-4 py-2.5 text-sm text-ink-800 outline-none transition focus:border-brand-400 dark:border-white/10 dark:bg-ink-900 dark:text-white" />
+          </div>
+        </div>
+        <div>
+          <label for="subject" class="mb-1.5 block text-sm font-medium text-ink-600 dark:text-ink-300">Subject</label>
+          <input id="subject" name="subject" type="text" required placeholder="What's this about?" class="w-full rounded-xl border border-ink-200 bg-white px-4 py-2.5 text-sm text-ink-800 outline-none transition focus:border-brand-400 dark:border-white/10 dark:bg-ink-900 dark:text-white" />
+        </div>
+        <div>
+          <label for="message" class="mb-1.5 block text-sm font-medium text-ink-600 dark:text-ink-300">Message</label>
+          <textarea id="message" name="message" rows="5" required placeholder="Tell me a bit about the opportunity or project..." class="w-full rounded-xl border border-ink-200 bg-white px-4 py-2.5 text-sm text-ink-800 outline-none transition focus:border-brand-400 dark:border-white/10 dark:bg-ink-900 dark:text-white"></textarea>
+        </div>
+        <button type="submit" class="btn-primary w-full sm:w-auto"><i class="bx bx-send"></i> Send Message</button>
+        <p id="form-status" class="text-sm text-ink-500 dark:text-ink-400" role="status"></p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ===================== Footer ===================== -->
+<footer class="border-t border-ink-100 px-6 py-8 dark:border-white/10">
+  <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 sm:flex-row">
+    <p class="text-sm text-ink-500 dark:text-ink-400">&copy; <span id="year"></span> Karthik Ragula. All rights reserved.</p>
+    <div class="flex gap-4">
+      <a href="https://github.com/Ragulakarthik" target="_blank" rel="noopener" class="text-ink-400 hover:text-brand-600 dark:hover:text-brand-400"><i class="bx bxl-github text-lg"></i></a>
+      <a href="https://www.linkedin.com/in/karthik-ragula-5a5b94220/" target="_blank" rel="noopener" class="text-ink-400 hover:text-brand-600 dark:hover:text-brand-400"><i class="bx bxl-linkedin text-lg"></i></a>
+      <a href="https://www.youtube.com/@karthikragula6666" target="_blank" rel="noopener" class="text-ink-400 hover:text-brand-600 dark:hover:text-brand-400"><i class="bx bxl-youtube text-lg"></i></a>
+      <a href="mailto:ragulakarthik04@gmail.com" class="text-ink-400 hover:text-brand-600 dark:hover:text-brand-400"><i class="bx bx-envelope text-lg"></i></a>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to top -->
+<button id="back-to-top" aria-label="Back to top" class="fixed bottom-6 right-6 z-50 flex h-11 w-11 translate-y-4 items-center justify-center rounded-full bg-brand-500 text-white opacity-0 shadow-lg shadow-brand-500/40 transition-all duration-300 hover:bg-brand-600">
+  <i class="bx bx-up-arrow-alt text-xl"></i>
+</button>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
