@@ -1,9 +1,9 @@
 <div align="center">
 
-### 🌐 [View my portfolio](https://ragulakarthik.github.io/Ragulakarthik/)
+### 🌐 [View my portfolio](https://karthikragula.github.io/KarthikRagula/)
 
 # 📊 GitHub Stats:
-![Ragulakarthik's Stats](https://github-readme-stats.vercel.app/api?username=Ragulakarthik&theme=radical&show_icons=true&hide_border=true&count_private=true)
+![KarthikRagula's Stats](https://github-readme-stats.vercel.app/api?username=KarthikRagula&theme=radical&show_icons=true&hide_border=true&count_private=true)
 
-![Ragulakarthik's Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Ragulakarthik&theme=radical&show_icons=true&hide_border=true&layout=compact)
+![KarthikRagula's Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=KarthikRagula&theme=radical&show_icons=true&hide_border=true&layout=compact)
 </div>
